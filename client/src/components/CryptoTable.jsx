@@ -3,7 +3,7 @@ import React from 'react';
 const Table = (props)=> {
 
        return (<table>
-                  <tr>
+                  <tr className="table-headers">
                     <th>Rank</th>
                     <th>Crypto</th>
                     <th>Symbol</th>
@@ -11,7 +11,14 @@ const Table = (props)=> {
                     <th>Market Cap</th>
                     <th>% Change</th>
                   </tr>
-                  {props.cryptos.map(({rank, name, symbol, price, marketCap, priceChange24hr})=> <Crypto rank={rank} name={name} symbol={symbol} price={price} marketCap={marketCap} priceChange24hr={priceChange24hr} />)}
+                  {props.cryptos.map(
+                    ({rank, name, symbol, price, marketCap, priceChange24hr})=> 
+                      <Crypto rank={rank} 
+                              name={name} 
+                              symbol={symbol} 
+                              price={price} 
+                              marketCap={marketCap} 
+                              priceChange24hr={priceChange24hr} />)}
                 </table>)
 
 }
