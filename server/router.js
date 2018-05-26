@@ -3,6 +3,7 @@ const app = express();
 const router = express.Router();
 
 const axios = require('axios');
+const { formatPrice } = require('./helpers/helpers.js')
 
 router.use('/prices', async (req, res)=>{
   
@@ -16,9 +17,9 @@ router.use('/prices', async (req, res)=>{
   
     for (keys in data){
       //add new props for testing
-      data[keys].price = data[keys].quotes.USD.price;
-      data[keys].marketCap = data[keys].quotes.USD.market_cap;
-      data[keys].priceChange24hr = data[keys].quotes.USD.percent_change_24h;
+      data[keys].price = formatPrice(data[keys].quotes.USD.price);
+      data[keys].marketCap = formatPrice(data[keys].quotes.USD.market_cap);
+      data[keys].priceChange24hr = data[keys].quotes.USD.percent_change_24h + '%';
 
       cryptoData.push(data[keys]);
     }
