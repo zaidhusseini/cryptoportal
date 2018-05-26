@@ -5,25 +5,51 @@ Core Elements
 ==================================================================
 */
 
-body{
-  background-color: honeydew;
+html, body{
+  margin:0;
+  padding:0;
+  background-color: #5e2ed8;
   font-family: 'Roboto';
 }
 
+#nav{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: #28e0de;
+}
+
 table {
+  margin-top: 5%;
   border-collapse: collapse;
   width: 100%;
 }
 
 td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
+  border: 1px solid;
+  text-align: center;
+  color: #fcfbfe;
   padding: 8px;
 }
 
-tr:nth-child(even) {
-  background-color: paleturquoise;
+th{
+  background-color: #323245;
 }
+
+tr:nth-child(even) {
+  background-color: #682dfb;
+}
+
+tr:nth-child(odd) {
+  background-color: #5e2ed8;
+}
+
+
+#app{
+  display:flex;
+  justify-content: center;
+}
+
 
 
 /*
