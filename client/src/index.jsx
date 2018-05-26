@@ -8,19 +8,31 @@ class App extends React.Component {
   constructor(){
     super();
     this.state = {
-      cryptos: []
+      cryptos: [],
+      pricesReceived: false
     };
   }
 
   async componentWillMount(){
     let cryptoData = await axios.get('/prices');
     console.log(cryptoData.data);
-    this.setState({cryptos:cryptoData.data});
+    setTimeout(()=>this.setState({
+      cryptos:cryptoData.data,
+      pricesReceived: true
+    }), 2000);
   }
 
   render(){
+    let display = (<div className="loader-container"> 
+                    <div className="loader"> </div>
+                   </div>)
+
+    if (this.state.pricesReceived){
+      display = <Table cryptos={this.state.cryptos} />;
+    }
+
     return (<div className="coin-table">
-              <Table cryptos={this.state.cryptos} />
+              {display}
             </div>)
   }
 

@@ -6,7 +6,7 @@ Core Elements
 */
 
 html, body{
-  margin:0;
+  margin:0; /* CSS Resets */
   padding:0;
   background-color: #5e2ed8;
   font-family: 'Roboto';
@@ -51,9 +51,29 @@ tr:nth-child(odd) {
 }
 
 
-
 /*
 ==================================================================
 Elements 
 ==================================================================
 */
+
+.loader-container{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+.loader {
+  border: 10px solid #28e0de; 
+  border-radius: 50%;
+  border-top: 10px solid #f3f3f3;
+  width: 80px;
+  height: 80px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
