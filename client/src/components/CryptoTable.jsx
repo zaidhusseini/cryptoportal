@@ -9,7 +9,7 @@ const Table = (props)=> {
                     <th>Symbol</th>
                     <th>Price</th>
                     <th>Market Cap</th>
-                    <th>% Change</th>
+                    <th>24hr (% Change)</th>
                   </tr>
                   {props.cryptos.map(
                     ({rank, name, symbol, price, marketCap, priceChange24hr})=> 
