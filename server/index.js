@@ -2,7 +2,7 @@ const path = require('path');
 
 const express = require('express');
 const app = express();
-const router = require('./router.js');
+const router = require('./routers/index.js');
 
 
 const PUBLIC_DIRECTORY = path.join(__dirname, '../client/dist');

@@ -1,11 +1,16 @@
+
+//Router for /prices endpoint
+
 const express = require('express');
 const app = express();
 const router = express.Router();
 
 const axios = require('axios');
-const { formatPrice } = require('./helpers/helpers.js')
+const { formatPrice } = require('../helpers/helperFunctions.js')
 
-router.use('/prices', async (req, res)=>{
+
+//Get request for '/' all prices
+router.get('/', async (req, res)=>{
   
   try {
 
@@ -35,7 +40,6 @@ router.use('/prices', async (req, res)=>{
     res.status(500).send(err);
   }
   
-
 });
 
 module.exports = router;
