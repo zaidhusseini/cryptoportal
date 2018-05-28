@@ -8,40 +8,23 @@ Core Elements
 html, body{
   margin:0; /* CSS Resets */
   padding:0;
-  background-color: #5e2ed8;
+  /*background-color: #5e2ed8;*/
   font-family: 'Roboto';
+}
+
+h1{
+  font-family: 'Roboto', 'VT323', monospace;
+  font-size: 60px;
 }
 
 #nav{
   display: flex;
   justify-content: center;
   width: 100%;
-  background-color: #28e0de;
-}
-
-table {
-  margin-top: 5%;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-td, th {
-  border: 1px solid;
-  text-align: center;
-  color: #fcfbfe;
-  padding: 8px;
-}
-
-th{
-  background-color: #323245;
-}
-
-tr:nth-child(even) {
-  background-color: #682dfb;
-}
-
-tr:nth-child(odd) {
+  height: 15%;
   background-color: #5e2ed8;
+  color: white;
+  align-items: center;
 }
 
 
@@ -50,10 +33,67 @@ tr:nth-child(odd) {
   justify-content: center;
 }
 
+/*
+==================================================================
+Tables 
+==================================================================
+*/
+
+table {
+  margin-top: 5%;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  /*border: 1px solid;*/
+  text-align: center;
+  /*color: #fcfbfe;*/
+  color: #323245;
+  padding: 8px;
+  font-size: 24px;
+}
+
+th{
+  background-color: #323245;
+  color: #fcfbfe;
+}
+
+tr:nth-child(even) {
+  /*background-color: #682dfb;*/
+}
+
+tr:nth-child(odd) {
+  /*background-color: #5e2ed8;*/
+}
+
+th{
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0px 5px 5px black;
+
+}
+
+
+.positive-price-change{
+  color: lime;
+  font-weight: bold;
+}
+
+.negative-price-change{
+  color: red;
+  font-weight: bold;
+}
+
+.crypto-name{
+  text-align: left;
+  max-width: 8%;
+}
 
 /*
 ==================================================================
-Elements 
+Loaders 
 ==================================================================
 */
 
@@ -77,3 +117,11 @@ Elements
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+
+
+/*
+==================================================================
+Buttons 
+==================================================================
+*/
+
