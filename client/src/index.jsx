@@ -19,7 +19,7 @@ class App extends React.Component {
     setTimeout(()=>this.setState({
       cryptos:cryptoData.data,
       pricesReceived: true
-    }), 2000);
+    }), 1000);
   }
 
   render(){
