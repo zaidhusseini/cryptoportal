@@ -27,7 +27,7 @@ const Table = (props)=> {
 const Crypto = (props)=> {
   return (<tr>
             <td>{props.rank}</td>
-            <td className="crypto-name"><img src={`icons/${props.symbol.toLowerCase()}.png`} />{` `+ props.name}</td>
+            <td className="crypto-name"><img src={`icons/${props.symbol.toLowerCase()}.png`} /><span className="crypto-name-text">{props.name}</span></td>
             <td>{props.symbol}</td>
             <td>{props.price}</td>
             <td>{props.marketCap}</td>

@@ -88,7 +88,13 @@ th{
 
 .crypto-name{
   text-align: left;
-  max-width: 8%;
+  width: 25%;
+}
+
+.crypto-name-text{
+  vertical-align: bottom;
+  padding-left: 5px;
+
 }
 
 /*
